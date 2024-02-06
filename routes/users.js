@@ -4,6 +4,7 @@ export const router = express.Router();
 
 router.get("/", (req, res) => {
   // We can access query parameters from the req object
+  // For example http://localhost:8080/users?name=Bob
   if (req.query?.name) {
     const user = users.find((u) => u.name === req.query?.name);
     if (user) {
